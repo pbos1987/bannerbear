@@ -56,9 +56,9 @@ def create_image(modifications):
 
     print(img_data_dict)
     print("--------------")
-    #url = "https://api.bannerbear.com/v2/images"
-    #r = requests.post(url, data=json.dumps(img_data_dict), headers=headers)
-    #list_all_images()
+    url = "https://api.bannerbear.com/v2/images"
+    r = requests.post(url, data=json.dumps(img_data_dict), headers=headers)
+    list_all_images()
 
 def list_all_images():
     headers = {
