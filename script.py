@@ -107,9 +107,3 @@ for combination in all_combinations:
 
 for creative in comb_list:
     create_modifications(creative)
-
-
-#for combination in all_combinations:
- #   create_image(combination[0], combination[1], combination[2])
-
-#list_all_images()
