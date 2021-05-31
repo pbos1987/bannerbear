@@ -6,7 +6,7 @@ import shutil
 import time
 
 api_key = '<API KEY>'
-template = "<TEMPLATE>"
+template = '<TEMPLATE>'
 
 modification_list = []
 
