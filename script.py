@@ -9,7 +9,7 @@ headers = {
             'Authorization' : 'Bearer <API KEY>'
         }
 
-template = "wXmzGBDareKbLN7gjn"
+template = "<TEMPLATE>"
 
 modification_list = []
 
