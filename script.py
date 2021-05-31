@@ -3,12 +3,9 @@ import itertools
 import json
 import requests
 import shutil
+import time
 
-headers = {
-            'Content-Type' : 'application/json',
-            'Authorization' : 'Bearer <API KEY>'
-        }
-
+api_key = '<API KEY>'
 template = "<TEMPLATE>"
 
 modification_list = []
@@ -49,6 +46,11 @@ def create_modifications(creative_dict):
 
 
 def create_image(modifications):
+    headers = {
+            'Content-Type' : 'application/json',
+            'Authorization' : f'Bearer {api_key}'
+        }
+
     img_data_dict = {
     "template": template,
     "modifications": modifications
@@ -58,11 +60,12 @@ def create_image(modifications):
     print("--------------")
     url = "https://api.bannerbear.com/v2/images"
     r = requests.post(url, data=json.dumps(img_data_dict), headers=headers)
+    time.sleep(30)
     list_all_images()
 
 def list_all_images():
     headers = {
-                'Authorization' : 'Bearer <API KEY>'
+                'Authorization' : f'Bearer {api_key}'
             }
 
     url = "https://api.bannerbear.com/v2/images"    
@@ -77,7 +80,7 @@ def list_all_images():
 
 def retrieve_image(uid):
     headers = {
-                'Authorization' : 'Bearer <API KEY>'
+                'Authorization' : f'Bearer {api_key}'
               }
     url = f"https://api.bannerbear.com/v2/images/{uid}"
     r = requests.get(url, headers = headers).json()
