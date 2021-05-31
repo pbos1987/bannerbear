@@ -38,7 +38,8 @@ def create_modifications(creative_dict):
             empty_dict['color'] = y
             main_dict.update(empty_dict)
         else:
-            pass
+            continue
+            
     modifications.append(main_dict)
 
     for mod in modifications:
