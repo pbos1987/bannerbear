@@ -6,7 +6,7 @@ import shutil
 
 headers = {
             'Content-Type' : 'application/json',
-            'Authorization' : 'Bearer STNKhcO1rGNxN4VI7aD91gtt'
+            'Authorization' : 'Bearer <API KEY>'
         }
 
 template = "wXmzGBDareKbLN7gjn"
@@ -62,7 +62,7 @@ def create_image(modifications):
 
 def list_all_images():
     headers = {
-                'Authorization' : 'Bearer STNKhcO1rGNxN4VI7aD91gtt'
+                'Authorization' : 'Bearer <API KEY>'
             }
 
     url = "https://api.bannerbear.com/v2/images"    
@@ -77,7 +77,7 @@ def list_all_images():
 
 def retrieve_image(uid):
     headers = {
-                'Authorization' : 'Bearer STNKhcO1rGNxN4VI7aD91gtt'
+                'Authorization' : 'Bearer <API KEY>'
               }
     url = f"https://api.bannerbear.com/v2/images/{uid}"
     r = requests.get(url, headers = headers).json()
