@@ -100,9 +100,10 @@ comb_list = []
 
 for combination in all_combinations:
     comb_dict = {}
-    comb_dict[modification_list[0]] = combination[0]
-    comb_dict[modification_list[1]] = combination[1]
-    comb_dict[modification_list[2]] = combination[2]
+    num = 0
+    for mod in range(len(modification_list)):
+            comb_dict[modification_list[num]] = combination[num]
+            num += 1
     comb_list.append(comb_dict)
 
 for creative in comb_list:
